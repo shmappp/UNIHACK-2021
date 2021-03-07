@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.myapplication.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment"
+            app:enterAnim="@anim/enter_right_to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.myapplication.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_existing2"
+            app:destination="@id/existing2"
+            app:enterAnim="@anim/enter_right_to_left" />
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_disclaimer"
+            app:destination="@id/disclaimer"
+            app:enterAnim="@anim/enter_right_to_left" />
+        <action
+            android:id="@+id/action_SecondFragment_to_completionform"
+            app:destination="@id/completionform" />
+    </fragment>
+    <fragment
+        android:id="@+id/submission"
+        android:name="com.example.myapplication.submission"
+        android:label="fragment_submission"
+        tools:layout="@layout/fragment_submission" >
+        <action
+            android:id="@+id/action_submission_to_emergency"
+            app:destination="@id/emergency"
+            app:enterAnim="@anim/enter_right_to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/existing2"
+        android:name="com.example.myapplication.existing"
+        android:label="fragment_existing"
+        tools:layout="@layout/fragment_existing" />
+    <fragment
+        android:id="@+id/physical_harm"
+        android:name="com.example.myapplication.physical_harm"
+        android:label="fragment_physical_harm"
+        tools:layout="@layout/fragment_physical_harm" >
+        <action
+            android:id="@+id/action_physical_harm_to_harm_yes"
+            app:destination="@id/harm_yes"
+            app:enterAnim="@anim/enter_right_to_left" />
+        <action
+            android:id="@+id/action_physical_harm_to_danger"
+            app:destination="@id/danger"
+            app:enterAnim="@anim/enter_right_to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/harm_yes"
+        android:name="com.example.myapplication.harm_yes"
+        android:label="fragment_harm_yes"
+        tools:layout="@layout/fragment_harm_yes" >
+        <action
+            android:id="@+id/action_harm_yes_to_danger"
+            app:destination="@id/danger"
+            app:enterAnim="@anim/enter_right_to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/emergency"
+        android:name="com.example.myapplication.emergency"
+        android:label="fragment_emergency"
+        tools:layout="@layout/fragment_emergency" >
+        <action
+            android:id="@+id/action_emergency_to_physical_harm"
+            app:destination="@id/physical_harm"
+            app:enterAnim="@anim/enter_right_to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/danger"
+        android:name="com.example.myapplication.danger"
+        android:label="fragment_danger"
+        tools:layout="@layout/fragment_danger" >
+        <action
+            android:id="@+id/action_danger_to_openended"
+            app:destination="@id/openended"
+            app:enterAnim="@anim/enter_right_to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/disclaimer"
+        android:name="com.example.myapplication.disclaimer"
+        android:label="fragment_disclaimer"
+        tools:layout="@layout/fragment_disclaimer" >
+        <action
+            android:id="@+id/action_disclaimer_to_submission"
+            app:destination="@id/submission"
+            app:enterAnim="@anim/enter_right_to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/openended"
+        android:name="com.example.myapplication.openended"
+        android:label="fragment_openended"
+        tools:layout="@layout/fragment_openended" >
+        <action
+            android:id="@+id/action_openended_to_docupload"
+            app:destination="@id/docupload"
+            app:enterAnim="@anim/enter_right_to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/completionform"
+        android:name="com.example.myapplication.completionform"
+        android:label="fragment_completionform"
+        tools:layout="@layout/fragment_completionform" />
+    <fragment
+        android:id="@+id/docupload"
+        android:name="com.example.myapplication.docupload"
+        android:label="fragment_docupload"
+        tools:layout="@layout/fragment_docupload" >
+        <action
+            android:id="@+id/action_docupload_to_completionform"
+            app:destination="@id/completionform"
+            app:enterAnim="@anim/enter_right_to_left" />
+    </fragment>
+</navigation>

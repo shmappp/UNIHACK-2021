@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".existing">
+
+    <TextView
+        android:id="@+id/textview_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="156dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ffeab2"
+                android:lineSpacingExtra="6sp"
+                android:text="Domestic Abuse \n Submitted: 08/03/2021 \n Status: Pending"
+
+                android:textColor="#686464"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#b2eaff"
+
+                android:lineSpacingExtra="6sp"
+                android:text="Domestic Abuse \n Submitted: 07/03/2021 \n Status: Reviewed"
+                android:textColor="#686464"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#b2eaff"
+
+                android:lineSpacingExtra="6sp"
+                android:text="Property/Tenancy \n Submitted: 06/03/2021 \n Status: Reviewed"
+                android:textColor="#686464"
+                android:textIsSelectable="false"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
